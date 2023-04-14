@@ -1,0 +1,57 @@
+Initialized empty Git repository in /root/nodejs-api-that-takes-two-inputs/.git/
+[main (root-commit) 2292756] 👷🏼 Add .gitignore
+ 1 file changed, 4 insertions(+)
+ create mode 100644 .gitignore
+[main 0d2c2ef] 👷🏼 Add package.json
+ 1 file changed, 1 insertion(+)
+ create mode 100644 package.json
+Wrote to /root/nodejs-api-that-takes-two-inputs/package.json:
+
+{
+  "name": "nodejs-api-that-takes-two-inputs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
+
+[main e8c260a] 👷🏼 Initialize NodeJS project
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+added 70 packages, and audited 71 packages in 2s
+
+8 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm notice 
+npm notice New minor version of npm available! 9.5.1 -> 9.6.4
+npm notice Changelog: <https://github.com/npm/cli/releases/tag/v9.6.4>
+npm notice Run `npm install -g npm@9.6.4` to update!
+npm notice 
+The following paths are ignored by one of your .gitignore files:
+package-lock.json
+hint: Use -f if you really want to add them.
+hint: Turn this message off by running
+hint: "git config advice.addIgnoredFile false"
+[main 5e898bc] 👷🏼 Install dependencies
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+[main bddbb12] 👷🏼 Add server.js
+ 1 file changed, 48 insertions(+)
+ create mode 100644 server.js
+/app/build.sh: line 88: http://localhost:3000/cache?url=YOUR_URL: No such file or directory
+/app/build.sh: line 90: url: command not found
+/app/build.sh: line 91: expiration: command not found
+The following paths are ignored by one of your .gitignore files:
+README.md
+hint: Use -f if you really want to add them.
+hint: Turn this message off by running
+hint: "git config advice.addIgnoredFile false"
+On branch main
+nothing to commit, working tree clean
