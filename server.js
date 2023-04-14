@@ -17,16 +17,20 @@ app.use(limiter);
 
 app.get('/cache', async (req, res) => {
     const url = req.query.url;
-    const expiration = parseInt(req.query.expiration);
+    const expiration = parseInt(req.query.expiration) || 60 * 10; // Default: ten minutes
     const isCache = cache.has(url);
+
+    console.log("Cached? " + (isCache?"Y":"N"))
 
     if (isCache) {
         const cachedResponse = cache.get(url);
         const now = new Date().getTime();
 
         if (now > cachedResponse.expiration) {
+            console.log("Cache expired. Fetching again.")
             cache.delete(url);
         } else {
+            console.log("Returning cache.")
             return res.status(cachedResponse.status).send(cachedResponse.data);
         }
     }
