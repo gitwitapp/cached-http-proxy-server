@@ -1,10 +1,10 @@
 {
-    "repositoryName": "nodejs-api-that-takes-two-inputs",
-    "description": "A NodeJS API that takes two inputs: A web URL, and an expiration period. Upon receiving a request, it checks for a cached HTTP response from that URL. If available and within the expiration period, it returns the response. Otherwise, it fetches the response and stores it in the cache.",
-    "generator": "GitWit",
-    "generatorVersion": "0.0.6",
-    "gptModel": "gpt-3.5-turbo-0301",
-    "completionId": "chatcmpl-75E3PZGbKZD861C4x8vGLF23X1VXE",
-    "repositoryURL": "https://github.com/gitwitapp/nodejs-api-that-takes-two-inputs.git",
-    "dateCreated": "2023-04-14T13:47:50.953Z"
+	"repositoryName": "nodejs-api-that-takes-two-inputs",
+	"description": "Add a README",
+	"generator": "GitWit",
+	"generatorVersion": "0.0.6",
+	"gptModel": "gpt-3.5-turbo-0301",
+	"completionId": "chatcmpl-75E7ay1C1n4FuBT24e1Gp3OY94RM2",
+	"repositoryURL": "https://github.com/gitwitapp/nodejs-api-that-takes-two-inputs.git",
+	"dateCreated": "2023-04-14T13:52:02.737Z"
 }
