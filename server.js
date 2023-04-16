@@ -1,5 +1,6 @@
 const express = require('express');
 const axios = require('axios');
+const https = require('https');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const cors = require('cors');
@@ -38,7 +39,13 @@ app.get('/cache', async (req, res) => {
     }
 
     try {
-        const response = await axios.get(url);
+        const agent = new https.Agent({
+            rejectUnauthorized: false
+        });
+        const response = await axios.get(url, {
+            headers: req.headers,
+            httpsAgent: agent
+        });
         cache.set(url, {
             status: response.status,
             expiration: new Date().getTime() + expiration * 1000,
