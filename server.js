@@ -12,8 +12,8 @@ app.use(cors()); // Enable CORS requests
 app.use(morgan('tiny'));
 
 const limiter = rateLimit({
-    windowMs: 60 * 1000,
-    max: 10,
+    windowMs: 15,
+    max: 15,
     message: 'Too many requests, please try again later.'
 });
 app.use(limiter);
