@@ -2,10 +2,12 @@ const express = require('express');
 const axios = require('axios');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
+const cors = require('cors');
 const app = express();
 
 const cache = new Map();
 
+app.use(cors()); // Enable CORS requests
 app.use(morgan('tiny'));
 
 const limiter = rateLimit({
