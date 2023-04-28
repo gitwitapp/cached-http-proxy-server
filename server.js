@@ -1,16 +1,19 @@
 const express = require('express');
 const axios = require('axios');
+const https = require('https');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
+const cors = require('cors');
 const app = express();
 
 const cache = new Map();
 
+app.use(cors()); // Enable CORS requests
 app.use(morgan('tiny'));
 
 const limiter = rateLimit({
-    windowMs: 60 * 1000,
-    max: 10,
+    windowMs: 15,
+    max: 15,
     message: 'Too many requests, please try again later.'
 });
 app.use(limiter);
@@ -36,7 +39,13 @@ app.get('/cache', async (req, res) => {
     }
 
     try {
-        const response = await axios.get(url);
+        const agent = new https.Agent({
+            rejectUnauthorized: false
+        });
+        const response = await axios.get(url, {
+            headers: req.headers,
+            httpsAgent: agent
+        });
         cache.set(url, {
             status: response.status,
             expiration: new Date().getTime() + expiration * 1000,
